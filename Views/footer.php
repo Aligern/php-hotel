@@ -1,6 +1,10 @@
 
 <footer>
-    <h3>Powered by Luca "Aligern" Sasso</h3>
+    <div>
+        <h6 class="container text-center ">
+            Powered by Luca "Aligern" Sasso
+        </h6>
+    </div>
 </footer>
 
 </body>
