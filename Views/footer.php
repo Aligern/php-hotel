@@ -6,6 +6,6 @@
         </h6>
     </div>
 </footer>
-
+<!-- here we take the closure of the body and the html to be displayed into our index.php -->
 </body>
 </html>

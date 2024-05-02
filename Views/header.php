@@ -1,3 +1,5 @@
+<!-- here we take the opening of our html and the body to be displayed into our index.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,5 @@
 <?php
-
+# this is our hotels model
     $hotels = [
 
         [
