@@ -11,7 +11,7 @@ include __DIR__ ."/Views/header.php";
 
 <main>
 <?php 
-    var_dump($hotels);
+    include __DIR__ . "/Views/table.php";
 ?>
 </main>
 
