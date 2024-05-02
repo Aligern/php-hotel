@@ -14,8 +14,23 @@
     <title>PHP Hotel</title>
 </head>
 <body>
-    <header class="container text-center bg-black text-white">
+    <header class="text-center bg-secondary text-white ">
         <h1>
             Hotels
         </h1>
+    <div class="container d-flex pb-2">
+        <form class="align-items-end" action="index.php" method="GET">
+                <select class="form-control me-2" name="stats">
+                    <option value="all">
+                        Tutti gli Hotel
+                    </option>
+                    <option value="1">
+                        Solo con Parcheggio
+                    </option>
+                </select>
+                <button type="submit" class="btn btn-danger">
+                    Search
+                </button>
+            </form>
+    </div>
     </header>
