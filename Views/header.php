@@ -18,16 +18,41 @@
         <h1>
             Hotels
         </h1>
-    <div class="container d-flex pb-2">
-        <form class="align-items-end" action="index.php" method="GET">
-                <select class="form-control me-2" name="stats">
+    <div class="container d-flex justify-content-between pb-2">
+        <form action="index.php" method="GET">
+                <select name="stats">
                     <option value="all">
                         Tutti gli Hotel
+                    </option>
+                    <option value="0">
+                        Solo senza Parcheggio
                     </option>
                     <option value="1">
                         Solo con Parcheggio
                     </option>
                 </select>
+
+                <select  action="index.php" name="stars" >
+                    <option value="all">
+                        Tutte le valutazioni
+                    </option>
+                    <option value="1">
+                        1
+                    </option>
+                    <option value="2">
+                        2
+                    </option>
+                    <option value="3">
+                        3
+                    </option>
+                    <option value="4">
+                        4
+                    </option>
+                    <option value="5">
+                        5
+                    </option>
+                </select>
+
                 <button type="submit" class="btn btn-danger">
                     Search
                 </button>

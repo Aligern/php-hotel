@@ -2,9 +2,10 @@
 
 $template = "";
 // here we print the table for each hotel with its properties
-foreach ($hotelsP as $hotel) {
+foreach ($hotelStars as $hotel) {
     $template .= "<tr> <td>{$hotel['name']}</td> <td>{$hotel['description']}</td> <td>{$hotel['parking']}</td> <td>{$hotel['vote']}</td> <td>{$hotel['distance_to_center']}</td> </tr>";
 };
+
 ?>
 
 <div class="container">

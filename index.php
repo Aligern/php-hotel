@@ -1,15 +1,21 @@
 <?php 
+$stars = isset($_GET['stars']) ? $_GET['stars'] : 'all';
 // here we include the model
 include __DIR__ . "/Models/model.php";
 
-if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0)) {
+if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && !empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
     $stats = $_GET['stats'];
-    $hotelsP = array_filter($hotels, function ($hotel) use ($stats) {
+    $stars = $_GET['stars'];
+    $hotelsParks = array_filter($hotels, function ($hotel) use ($stats) {
         return $hotel['parking'] == $stats || $stats == "all";
     });
+    $hotelStars = array_filter($hotelsParks, function ($hotel) use ($stars) {
+        return $hotel['vote'] >= $stars || $stars == "all";
+    });
 } else {
-    $hotelsP = $hotels;
+    $hotelStars = $hotels;
 }
+
 
 // here we include the header
 include __DIR__ ."/Views/header.php";
