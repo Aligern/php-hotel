@@ -1,7 +1,5 @@
-<?php 
-$stars = isset($_GET['stars']) ? $_GET['stars'] : 'all';
-// here we include the model
-include __DIR__ . "/Models/model.php";
+<?php
+include __DIR__ . "/Models/hotel.php";
 
 if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && !empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
     $stats = $_GET['stats'];
@@ -15,19 +13,15 @@ if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && 
 } else {
     $hotelStars = $hotels;
 }
-
-
 // here we include the header
 include __DIR__ ."/Views/header.php";
 ?>
-
 <main>
     <!-- here we include the table -->
 <?php 
     include __DIR__ . "/Views/table.php";
 ?>
 </main>
-
 <!-- here we include the footer -->
 <?php 
 include __DIR__ ."/Views/footer.php";
