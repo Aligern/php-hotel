@@ -18,7 +18,7 @@
         <h1>
             Hotels
         </h1>
-    <div class="container d-flex justify-content-between pb-2">
+    <div class="container d-flex justify-content-between  pb-2">
         <form action="index.php" method="GET">
                 <select name="stats">
                     <option value="all">
@@ -53,7 +53,7 @@
                     </option>
                 </select>
 
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" class="btn btn-success">
                     Search
                 </button>
             </form>

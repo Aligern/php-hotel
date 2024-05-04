@@ -1,6 +1,9 @@
 <?php
 include __DIR__ . "/Models/hotel.php";
 
+
+
+// here we filter the hotels based on the stars and the parking
 if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && !empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
     $stats = $_GET['stats'];
     $stars = $_GET['stars'];
@@ -16,11 +19,11 @@ if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && 
 // here we include the header
 include __DIR__ ."/Views/header.php";
 ?>
-<main>
+<main class="vh-100">
     <!-- here we include the table -->
-<?php 
-    include __DIR__ . "/Views/table.php";
-?>
+    <?php 
+        include __DIR__ . "/Views/table.php";
+    ?>
 </main>
 <!-- here we include the footer -->
 <?php 
