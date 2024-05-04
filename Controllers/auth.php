@@ -2,8 +2,13 @@
 # Session_start permits us to start a session
 session_start();
 
-include __DIR__ . "/../Models/user.php";
+# we need to check if the user is already logged in
+if (isset($_SESSION['idUser'])) {
+    # if the user is already logged in, we redirect him to the index.php
+    header('Location: index.php');
+}
 
+include __DIR__ . "/../Models/user.php";
 
 # we need to check if the user is already logged in
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -20,5 +25,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $_SESSION['idUser'] = $user['id'];
         $_SESSION['name'] = $user['name'];
         header('Location: index.php');
-}
-}
+} else {    
+        // errore qua
+    }
+};

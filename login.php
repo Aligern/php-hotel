@@ -4,8 +4,7 @@ include __DIR__ . "/Views/header.php";
 # we include the auth controller
 include __DIR__ ."/Controllers/auth.php";
 ?>
-
-<main class="container py-5 bg-body-tertiary  my-4">
+<main class="container py-5 bg-body-tertiary">
     <?php 
         # here we check if there is an error in the login form
         if (!empty($_GET['error'])) {
@@ -37,7 +36,6 @@ include __DIR__ ."/Controllers/auth.php";
         </form>
     </div>
 </main>
-
 <?php
 include __DIR__ . "/Views/footer.php";
 ?>
