@@ -1,10 +1,13 @@
 <?php 
+# we include the header
 include __DIR__ . "/Views/header.php";
+# we include the auth controller
 include __DIR__ ."/Controllers/auth.php";
 ?>
 
 <main class="container py-5 bg-body-tertiary  my-4">
     <?php 
+        # here we check if there is an error in the login form
         if (!empty($_GET['error'])) {
             echo "<div class='alert alert-danger' role='alert'>Hai inserito una email o una password errata/e</div>";
         }
@@ -33,7 +36,6 @@ include __DIR__ ."/Controllers/auth.php";
             </button>
         </form>
     </div>
-
 </main>
 
 <?php

@@ -1,8 +1,6 @@
 <?php
 include __DIR__ . "/Models/hotel.php";
 
-
-
 // here we filter the hotels based on the stars and the parking
 if (!empty($_GET['stats']) || (isset($_GET['stats']) && $_GET['stats'] == 0) && !empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
     $stats = $_GET['stats'];
