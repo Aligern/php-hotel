@@ -26,6 +26,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $_SESSION['name'] = $user['name'];
         header('Location: index.php');
 } else {    
-        // errore qua
+        # this variable will be used to display an error if the user is not authenticated
+        header('Location: login.php?error=1');
     }
 };

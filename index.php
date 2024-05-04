@@ -31,6 +31,9 @@ include __DIR__ ."/Views/header.php";
         <h3>
             <?="Buongiorno ". '<br>' . $_SESSION['name'] ?>
         </h3>
+        <a href="logout.php" class="btn btn-success">
+            Log out
+        </a>
     </div>
     <!-- here we include the table -->
     <?php 

@@ -36,6 +36,7 @@ include __DIR__ ."/Controllers/auth.php";
         </form>
     </div>
 </main>
+
 <?php
 include __DIR__ . "/Views/footer.php";
 ?>
